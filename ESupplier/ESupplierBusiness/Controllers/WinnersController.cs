@@ -8,7 +8,9 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
+using System.Xml;
 using ESupplierBusiness.Models;
+using Newtonsoft.Json;
 
 namespace ESupplierBusiness.Controllers
 {
@@ -19,6 +21,7 @@ namespace ESupplierBusiness.Controllers
         // GET: api/Winners
         public IQueryable<Winners> GetWinners()
         {
+            System.Diagnostics.Debug.WriteLine($" - [GET] winners/");
             return db.Winners;
         }
 

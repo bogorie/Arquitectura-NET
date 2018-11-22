@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using ESupplierPresentation.Facade;
 using ESupplierPresentation.Models;
 
 namespace ESupplierPresentation.Views
@@ -14,11 +15,19 @@ namespace ESupplierPresentation.Views
     {
         private esupplierEntities db = new esupplierEntities();
 
+        private WinnersFacade facade;
+
+        public WinnersController()
+        {
+            facade = new WinnersFacade();
+        }
+
         // GET: Winners
         public ActionResult Index()
         {
             // TODO Consumir servicio!!
-            return View(db.Winners.ToList());
+            return View(facade.Index());
+            //return View(db.Winners.ToList());
         }
 
         // GET: Winners/Details/5
