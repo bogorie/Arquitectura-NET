@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="esupplierModelStoreContainer" CdmEntityContainer="esupplierEntities">
+    <EntitySetMapping Name="Winners">
+      <EntityTypeMapping TypeName="esupplierModel.Winners">
+        <MappingFragment StoreEntitySet="Winners">
+          <ScalarProperty Name="document" ColumnName="document" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="type" ColumnName="type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
