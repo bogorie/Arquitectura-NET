@@ -13,9 +13,9 @@ namespace ESupplierPresentation.Views
     {
         private QueryAuctionFacade facade;
 
-        /*public String startDate;
-        public String endDate;
-        public bool isRest;*/
+        public String startdate;
+        public String closedate;
+        public bool isRest;
 
         // GET: Auction
         public ActionResult Index()
@@ -25,13 +25,13 @@ namespace ESupplierPresentation.Views
         }
 
         // GET: Auction/Details/startDate/endDate
-        public ActionResult Details(String startDate, String endDate)
+        public ActionResult Details()
         {
-            if (startDate == null || endDate == null)
+            if (startdate == null || closedate == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Auction auction = facade.getAuction(startDate, endDate);
+            Auction auction = facade.getAuction(startdate, closedate);
             if (auction == null)
             {
                 return HttpNotFound();
@@ -40,7 +40,7 @@ namespace ESupplierPresentation.Views
         }
 
         // Auction/Query
-        public ActionResult Query([Bind(Include = "startDate, closeDate, isRest")] Auction auction)
+        public ActionResult Query()
         {
             //"Details", facade.query(auction)
             return View();

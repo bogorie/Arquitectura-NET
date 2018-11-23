@@ -163,4 +163,3 @@ C:\Users\hikar\Documents\GitHub\Arquitectura-NET\ESupplier\ESupplierPresentation
 C:\Users\hikar\Documents\GitHub\Arquitectura-NET\ESupplier\ESupplierPresentation\obj\Debug\ESupplierPresentation.csproj.CopyComplete
 C:\Users\hikar\Documents\GitHub\Arquitectura-NET\ESupplier\ESupplierPresentation\obj\Debug\ESupplierPresentation.dll
 C:\Users\hikar\Documents\GitHub\Arquitectura-NET\ESupplier\ESupplierPresentation\obj\Debug\ESupplierPresentation.pdb
-C:\Users\hikar\Documents\GitHub\Arquitectura-NET\ESupplier\ESupplierPresentation\obj\Debug\ESupplierPresentation.csprojAssemblyReference.cache

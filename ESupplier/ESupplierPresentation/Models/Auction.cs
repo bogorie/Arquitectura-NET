@@ -10,7 +10,6 @@ namespace ESupplierPresentation.Models
 
     public class Auction
     {
-        public bool isRest { get; set; }
         public long idauction { get; set; }
         public String startdate { get; set; }
         public String closedate { get; set; }
