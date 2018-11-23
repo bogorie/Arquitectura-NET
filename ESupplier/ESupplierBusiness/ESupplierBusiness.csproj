@@ -50,6 +50,12 @@
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.18.3, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.18.3.0\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess.EntityFramework, Version=6.122.18.3, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.EntityFramework.18.3.0\lib\net45\Oracle.ManagedDataAccess.EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
@@ -89,51 +95,51 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
-    <Content Include="Models\ESupplierModel.Context.tt">
+    <Content Include="Models\SQLModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ESupplierModel.Context.cs</LastGenOutput>
-      <DependentUpon>ESupplierModel.edmx</DependentUpon>
+      <DependentUpon>SQLModel.edmx</DependentUpon>
+      <LastGenOutput>SQLModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\ESupplierModel.tt">
+    <Content Include="Models\SQLModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ESupplierModel.edmx</DependentUpon>
-      <LastGenOutput>ESupplierModel.cs</LastGenOutput>
+      <DependentUpon>SQLModel.edmx</DependentUpon>
+      <LastGenOutput>SQLModel.cs</LastGenOutput>
     </Content>
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\WinnersController.cs" />
+    <Compile Include="Controllers\WINNERSController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\ESupplierModel.Context.cs">
+    <Compile Include="Models\SQLModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ESupplierModel.Context.tt</DependentUpon>
+      <DependentUpon>SQLModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\ESupplierModel.cs">
+    <Compile Include="Models\SQLModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ESupplierModel.tt</DependentUpon>
+      <DependentUpon>SQLModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\ESupplierModel.Designer.cs">
+    <Compile Include="Models\SQLModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ESupplierModel.edmx</DependentUpon>
+      <DependentUpon>SQLModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\Winners.cs">
-      <DependentUpon>ESupplierModel.tt</DependentUpon>
+      <DependentUpon>SQLModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="Models\ESupplierModel.edmx">
+    <EntityDeploy Include="Models\SQLModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ESupplierModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>SQLModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\ESupplierModel.edmx.diagram">
-      <DependentUpon>ESupplierModel.edmx</DependentUpon>
+    <Content Include="Models\SQLModel.edmx.diagram">
+      <DependentUpon>SQLModel.edmx</DependentUpon>
     </Content>
     <None Include="packages.config" />
     <None Include="Web.Debug.config">

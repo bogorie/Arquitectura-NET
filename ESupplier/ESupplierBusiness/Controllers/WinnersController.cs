@@ -8,51 +8,49 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
-using System.Xml;
 using ESupplierBusiness.Models;
-using Newtonsoft.Json;
 
 namespace ESupplierBusiness.Controllers
 {
-    public class WinnersController : ApiController
+    public class WINNERSController : ApiController
     {
-        private esupplierEntities db = new esupplierEntities();
+        private Entities db = new Entities();
 
-        // GET: api/Winners
-        public IQueryable<Winners> GetWinners()
+        // GET: api/WINNERS
+        public IQueryable<WINNERS> GetWINNERS()
         {
             System.Diagnostics.Debug.WriteLine($" - [GET] winners/");
-            return db.Winners;
+            return db.WINNERS;
         }
 
-        // GET: api/Winners/5
-        [ResponseType(typeof(Winners))]
-        public IHttpActionResult GetWinners(int id)
+        // GET: api/WINNERS/5
+        [ResponseType(typeof(WINNERS))]
+        public IHttpActionResult GetWINNERS(decimal id)
         {
-            Winners winners = db.Winners.Find(id);
-            if (winners == null)
+            WINNERS wINNERS = db.WINNERS.Find(id);
+            if (wINNERS == null)
             {
                 return NotFound();
             }
 
-            return Ok(winners);
+            return Ok(wINNERS);
         }
 
-        // PUT: api/Winners/5
+        // PUT: api/WINNERS/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutWinners(int id, Winners winners)
+        public IHttpActionResult PutWINNERS(decimal id, WINNERS wINNERS)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != winners.document)
+            if (id != wINNERS.DOCUMENT)
             {
                 return BadRequest();
             }
 
-            db.Entry(winners).State = EntityState.Modified;
+            db.Entry(wINNERS).State = EntityState.Modified;
 
             try
             {
@@ -60,7 +58,7 @@ namespace ESupplierBusiness.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!WinnersExists(id))
+                if (!WINNERSExists(id))
                 {
                     return NotFound();
                 }
@@ -73,16 +71,16 @@ namespace ESupplierBusiness.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/Winners
-        [ResponseType(typeof(Winners))]
-        public IHttpActionResult PostWinners(Winners winners)
+        // POST: api/WINNERS
+        [ResponseType(typeof(WINNERS))]
+        public IHttpActionResult PostWINNERS(WINNERS wINNERS)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            db.Winners.Add(winners);
+            db.WINNERS.Add(wINNERS);
 
             try
             {
@@ -90,7 +88,7 @@ namespace ESupplierBusiness.Controllers
             }
             catch (DbUpdateException)
             {
-                if (WinnersExists(winners.document))
+                if (WINNERSExists(wINNERS.DOCUMENT))
                 {
                     return Conflict();
                 }
@@ -100,23 +98,23 @@ namespace ESupplierBusiness.Controllers
                 }
             }
 
-            return CreatedAtRoute("DefaultApi", new { id = winners.document }, winners);
+            return CreatedAtRoute("DefaultApi", new { id = wINNERS.DOCUMENT }, wINNERS);
         }
 
-        // DELETE: api/Winners/5
-        [ResponseType(typeof(Winners))]
-        public IHttpActionResult DeleteWinners(int id)
+        // DELETE: api/WINNERS/5
+        [ResponseType(typeof(WINNERS))]
+        public IHttpActionResult DeleteWINNERS(decimal id)
         {
-            Winners winners = db.Winners.Find(id);
-            if (winners == null)
+            WINNERS wINNERS = db.WINNERS.Find(id);
+            if (wINNERS == null)
             {
                 return NotFound();
             }
 
-            db.Winners.Remove(winners);
+            db.WINNERS.Remove(wINNERS);
             db.SaveChanges();
 
-            return Ok(winners);
+            return Ok(wINNERS);
         }
 
         protected override void Dispose(bool disposing)
@@ -128,9 +126,9 @@ namespace ESupplierBusiness.Controllers
             base.Dispose(disposing);
         }
 
-        private bool WinnersExists(int id)
+        private bool WINNERSExists(decimal id)
         {
-            return db.Winners.Count(e => e.document == id) > 0;
+            return db.WINNERS.Count(e => e.DOCUMENT == id) > 0;
         }
     }
 }

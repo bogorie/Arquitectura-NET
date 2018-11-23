@@ -12,10 +12,10 @@ namespace ESupplierBusiness.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Winners
+    public partial class WINNERS
     {
-        public int document { get; set; }
-        public string name { get; set; }
-        public string type { get; set; }
+        public string NAME { get; set; }
+        public string TYPE { get; set; }
+        public decimal DOCUMENT { get; set; }
     }
 }
