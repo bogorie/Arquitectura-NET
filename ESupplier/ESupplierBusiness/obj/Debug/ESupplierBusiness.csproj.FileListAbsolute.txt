@@ -135,8 +135,8 @@ C:\Users\hikar\Documents\GitHub\Arquitectura-NET\ESupplier\ESupplierBusiness\bin
 C:\Users\hikar\Documents\GitHub\Arquitectura-NET\ESupplier\ESupplierBusiness\bin\es\System.Net.Http.Formatting.resources.dll
 C:\Users\hikar\Documents\GitHub\Arquitectura-NET\ESupplier\ESupplierBusiness\bin\es\System.Web.Http.resources.dll
 C:\Users\hikar\Documents\GitHub\Arquitectura-NET\ESupplier\ESupplierBusiness\bin\es\System.Web.Http.WebHost.resources.dll
-C:\Users\hikar\Documents\GitHub\Arquitectura-NET\ESupplier\ESupplierBusiness\obj\Debug\ESupplierBusiness.csprojAssemblyReference.cache
 C:\Users\hikar\Documents\GitHub\Arquitectura-NET\ESupplier\ESupplierBusiness\obj\Debug\ESupplierBusiness.csproj.CoreCompileInputs.cache
 C:\Users\hikar\Documents\GitHub\Arquitectura-NET\ESupplier\ESupplierBusiness\obj\Debug\ESupplierBusiness.csproj.CopyComplete
 C:\Users\hikar\Documents\GitHub\Arquitectura-NET\ESupplier\ESupplierBusiness\obj\Debug\ESupplierBusiness.dll
 C:\Users\hikar\Documents\GitHub\Arquitectura-NET\ESupplier\ESupplierBusiness\obj\Debug\ESupplierBusiness.pdb
+C:\Users\hikar\Documents\GitHub\Arquitectura-NET\ESupplier\ESupplierBusiness\obj\Debug\ESupplierBusiness.csprojAssemblyReference.cache

@@ -25,7 +25,6 @@ namespace ESupplierPresentation.Views
         // GET: Winners
         public ActionResult Index()
         {
-            // TODO Consumir servicio!!
             return View(facade.Index());
             //return View(db.Winners.ToList());
         }
