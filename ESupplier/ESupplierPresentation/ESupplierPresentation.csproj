@@ -145,10 +145,6 @@
     <None Include="packages.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Winners\Create.cshtml" />
-    <Content Include="Views\Winners\Delete.cshtml" />
-    <Content Include="Views\Winners\Details.cshtml" />
-    <Content Include="Views\Winners\Edit.cshtml" />
     <Content Include="Views\Winners\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Auction\Query.cshtml" />
