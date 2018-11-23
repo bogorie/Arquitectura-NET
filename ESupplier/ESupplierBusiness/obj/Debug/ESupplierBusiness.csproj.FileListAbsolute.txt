@@ -212,3 +212,4 @@ D:\Users\oscar\Documents\GitHub\Arquitectura-NET\ESupplier\ESupplierBusiness\obj
 D:\Users\oscar\Documents\GitHub\Arquitectura-NET\ESupplier\ESupplierBusiness\obj\Debug\ESupplierBusiness.pdb
 D:\Users\oscar\Documents\GitHub\Arquitectura-NET\ESupplier\ESupplierBusiness\bin\Oracle.ManagedDataAccess.dll
 D:\Users\oscar\Documents\GitHub\Arquitectura-NET\ESupplier\ESupplierBusiness\bin\Oracle.ManagedDataAccess.EntityFramework.dll
+D:\Users\oscar\Documents\GitHub\Arquitectura-NET\ESupplier\ESupplierBusiness\obj\Debug\ESupplierBusiness.csprojAssemblyReference.cache

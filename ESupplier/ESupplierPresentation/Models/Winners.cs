@@ -10,8 +10,8 @@ namespace ESupplierPresentation.Models
 
     public partial class Winners
     {
-        public int document { get; set; }
         public string name { get; set; }
         public string type { get; set; }
+        public double document { get; set; }
     }
 }

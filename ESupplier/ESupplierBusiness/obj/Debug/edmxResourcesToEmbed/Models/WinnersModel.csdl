@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WinnersModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="WINNERS2">
+    <Key>
+      <PropertyRef Name="DOCUMENT" />
+    </Key>
+    <Property Name="NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TYPE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="DOCUMENT" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="Winner" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="WINNERS2" EntityType="Self.WINNERS2" />
+  </EntityContainer>
+</Schema>

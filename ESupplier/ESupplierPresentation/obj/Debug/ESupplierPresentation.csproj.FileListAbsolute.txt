@@ -241,7 +241,6 @@ D:\Users\oscar\Documents\GitHub\Arquitectura-NET\ESupplier\ESupplierPresentation
 D:\Users\oscar\Documents\GitHub\Arquitectura-NET\ESupplier\ESupplierPresentation\bin\es\System.Web.Webpages.Razor.resources.dll
 D:\Users\oscar\Documents\GitHub\Arquitectura-NET\ESupplier\ESupplierPresentation\bin\es\System.Web.Helpers.resources.dll
 D:\Users\oscar\Documents\GitHub\Arquitectura-NET\ESupplier\ESupplierPresentation\bin\es\System.Web.Mvc.resources.dll
-D:\Users\oscar\Documents\GitHub\Arquitectura-NET\ESupplier\ESupplierPresentation\obj\Debug\ESupplierPresentation.csprojAssemblyReference.cache
 D:\Users\oscar\Documents\GitHub\Arquitectura-NET\ESupplier\ESupplierPresentation\obj\Debug\ESupplierPresentation.csproj.CoreCompileInputs.cache
 D:\Users\oscar\Documents\GitHub\Arquitectura-NET\ESupplier\ESupplierPresentation\obj\Debug\ESupplierPresentation.csproj.CopyComplete
 D:\Users\oscar\Documents\GitHub\Arquitectura-NET\ESupplier\ESupplierPresentation\obj\Debug\ESupplierPresentation.dll
