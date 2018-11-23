@@ -1,0 +1,41 @@
+﻿@model ESupplierPresentation.Models.Auction
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Auction</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.idauction)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idauction)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.startdate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.startdate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.closedate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.closedate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Consultar subastas", "../Auction/Query")
+</p>

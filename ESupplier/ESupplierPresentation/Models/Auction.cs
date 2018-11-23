@@ -10,12 +10,13 @@ namespace ESupplierPresentation.Models
 
     public class Auction
     {
+        public bool isRest { get; set; }
         public long idauction { get; set; }
         public String startdate { get; set; }
         public String closedate { get; set; }
-        private List<Auctionsuplier> auctionsuplierList { get; set; }
-        private List<Product> productList { get; set; }
         private int idUser { get; set; }
         private String username { get; set; }
-}
+        private List<Auctionsuplier> auctionsuplierList { get; set; }
+        private List<Product> productList { get; set; }
+    }
 }

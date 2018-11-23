@@ -126,10 +126,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Facade\QueryAuctionFacade.cs" />
     <Compile Include="Facade\WinnersFacade.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Integration\ProxyQueryAuction.cs" />
     <Compile Include="Integration\ProxyWinners.cs" />
     <Compile Include="Models\Auction.cs" />
     <Compile Include="Models\Auctionsuplier.cs" />
@@ -148,6 +150,7 @@
     <Content Include="Views\Winners\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Auction\Query.cshtml" />
+    <Content Include="Views\Auction\Details.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
