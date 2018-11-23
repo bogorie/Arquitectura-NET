@@ -12,7 +12,7 @@ namespace ESupplierBusiness
     // NOTA: para iniciar el Cliente de prueba WCF para probar este servicio, seleccione ServicioWCF.svc o ServicioWCF.svc.cs en el Explorador de soluciones e inicie la depuración.
     public class ServicioWCF : IServicioWCF
     {
-        
+
         private Controllers.WINNERSController controlador = new Controllers.WINNERSController();
 
         public void DoWork()
