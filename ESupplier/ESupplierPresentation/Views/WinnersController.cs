@@ -13,8 +13,6 @@ namespace ESupplierPresentation.Views
 {
     public class WinnersController : Controller
     {
-        private esupplierEntities db = new esupplierEntities();
-
         private WinnersFacade facade;
 
         public WinnersController()
@@ -32,17 +30,20 @@ namespace ESupplierPresentation.Views
         // GET: Winners/Details/5
         public ActionResult Details(int? id)
         {
+            /*
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             // TODO Consumir servicio!!
-            Winners winners = db.Winners.Find(id);
+            // Winners winners = db.Winners.Find(id);
             if (winners == null)
             {
                 return HttpNotFound();
             }
             return View(winners);
+            */
+            return View();
         }
 
         // GET: Winners/Create
@@ -61,8 +62,8 @@ namespace ESupplierPresentation.Views
             if (ModelState.IsValid)
             {
                 // TODO Consumir servicio!!
-                db.Winners.Add(winners);
-                db.SaveChanges();
+                // db.Winners.Add(winners);
+                // db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
@@ -72,17 +73,20 @@ namespace ESupplierPresentation.Views
         // GET: Winners/Edit/5
         public ActionResult Edit(int? id)
         {
+            /*
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             // TODO Consumir servicio!!
-            Winners winners = db.Winners.Find(id);
+            // Winners winners = db.Winners.Find(id);
             if (winners == null)
             {
                 return HttpNotFound();
             }
             return View(winners);
+            */
+            return View();
         }
 
         // POST: Winners/Edit/5
@@ -95,8 +99,8 @@ namespace ESupplierPresentation.Views
             if (ModelState.IsValid)
             {
                 // TODO Consumir servicio!!
-                db.Entry(winners).State = EntityState.Modified;
-                db.SaveChanges();
+                // db.Entry(winners).State = EntityState.Modified;
+                // db.SaveChanges();
                 return RedirectToAction("Index");
             }
             return View(winners);
@@ -105,17 +109,20 @@ namespace ESupplierPresentation.Views
         // GET: Winners/Delete/5
         public ActionResult Delete(int? id)
         {
+            /*
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             // TODO Consumir servicio!!
-            Winners winners = db.Winners.Find(id);
+            // Winners winners = db.Winners.Find(id);
             if (winners == null)
             {
                 return HttpNotFound();
             }
             return View(winners);
+            */
+            return View();
         }
 
         // POST: Winners/Delete/5
@@ -124,9 +131,9 @@ namespace ESupplierPresentation.Views
         public ActionResult DeleteConfirmed(int id)
         {
             // TODO Consumir servicio!!
-            Winners winners = db.Winners.Find(id);
-            db.Winners.Remove(winners);
-            db.SaveChanges();
+            // Winners winners = db.Winners.Find(id);
+            // db.Winners.Remove(winners);
+            // db.SaveChanges();
             return RedirectToAction("Index");
         }
 
@@ -134,7 +141,7 @@ namespace ESupplierPresentation.Views
         {
             if (disposing)
             {
-                db.Dispose();
+                // db.Dispose();
             }
             base.Dispose(disposing);
         }

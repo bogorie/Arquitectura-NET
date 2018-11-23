@@ -8,10 +8,10 @@ namespace ESupplierPresentation.Models
     using System;
     using System.Collections.Generic;
 
-    public partial class Winners
+    public class Auctionsuplier
     {
-        public int document { get; set; }
-        public string name { get; set; }
-        public string type { get; set; }
+        public String offer { get; set; }
+        public short win { get; set; }
+        public Supplier suplier { get; set; }
     }
 }
