@@ -46,5 +46,11 @@ namespace ESupplierPresentation.Views
             return View();
         }
 
+
+        public void recibeJava(ConsumeJaxWs.auction[] auction) {
+
+
+        }
+
     }
 }

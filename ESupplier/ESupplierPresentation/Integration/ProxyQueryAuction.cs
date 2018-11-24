@@ -7,11 +7,13 @@ using System.Web;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
+using ESupplierPresentation.Views;
 
 namespace ESupplierPresentation.Integration
 {
     public class ProxyQueryAuction
     {
+        
         HttpClient client = new HttpClient();
         readonly string BASE_URI = "http://localhost:?/api/....";
 
@@ -38,5 +40,16 @@ namespace ESupplierPresentation.Integration
             return JsonConvert.DeserializeObject<Auction>(response.Result);
         }
 
+        private ConsumeJaxWs.WsSoapQueryAuctionClient consumidorJaxWs = new ConsumeJaxWs.WsSoapQueryAuctionClient();
+        private AuctionController controlador;
+        
+
+       
+        public void ConsumeGetAuctionByDates(String fechaA, String fechaB)
+        {
+            ConsumeJaxWs.auction [] retorno ;
+            retorno = consumidorJaxWs.getAcutionByDates(fechaA, fechaB);
+            controlador.recibeJava(retorno);
+        }
     }
 }

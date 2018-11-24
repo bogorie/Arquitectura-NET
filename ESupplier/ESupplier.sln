@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ESupplierBusiness", "ESupplierBusiness\ESupplierBusiness.csproj", "{9BD3496D-FFCF-4B06-80F2-15759C4CDB94}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ESupplierPresentation", "ESupplierPresentation\ESupplierPresentation.csproj", "{05582CBE-6610-42B1-8D4A-89AF916508BE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9BD3496D-FFCF-4B06-80F2-15759C4CDB94} = {9BD3496D-FFCF-4B06-80F2-15759C4CDB94}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

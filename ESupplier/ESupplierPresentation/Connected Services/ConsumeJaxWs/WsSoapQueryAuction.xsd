@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://servicios/" targetNamespace="http://servicios/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="count" type="tns:count" />
+  <xs:element name="countResponse" type="tns:countResponse" />
+  <xs:element name="create" type="tns:create" />
+  <xs:element name="edit" type="tns:edit" />
+  <xs:element name="find" type="tns:find" />
+  <xs:element name="findAll" type="tns:findAll" />
+  <xs:element name="findAllResponse" type="tns:findAllResponse" />
+  <xs:element name="findRange" type="tns:findRange" />
+  <xs:element name="findRangeResponse" type="tns:findRangeResponse" />
+  <xs:element name="findResponse" type="tns:findResponse" />
+  <xs:element name="getAcutionByDates" type="tns:getAcutionByDates" />
+  <xs:element name="getAcutionByDatesResponse" type="tns:getAcutionByDatesResponse" />
+  <xs:element name="remove" type="tns:remove" />
+  <xs:complexType name="count">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="countResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="create">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="entity" type="tns:auction" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="auction">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="auctionsuplierList" nillable="true" type="tns:auctionsuplier" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="bidList" nillable="true" type="tns:bid" />
+      <xs:element minOccurs="0" name="closedate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="idauction" type="xs:long" />
+      <xs:element minOccurs="0" name="iduser" type="tns:usuario" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="productList" nillable="true" type="tns:product" />
+      <xs:element minOccurs="0" name="startdate" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="auctionsuplier">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="auction" type="tns:auction" />
+      <xs:element minOccurs="0" name="auctionsuplierPK" type="tns:auctionsuplierPK" />
+      <xs:element minOccurs="0" name="offer" type="xs:string" />
+      <xs:element minOccurs="0" name="suplier" type="tns:suplier" />
+      <xs:element minOccurs="0" name="win" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="auctionsuplierPK">
+    <xs:sequence>
+      <xs:element name="idauction" type="xs:long" />
+      <xs:element name="idsuplier" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="suplier">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="auctionsuplierList" nillable="true" type="tns:auctionsuplier" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="bidList" nillable="true" type="tns:bid" />
+      <xs:element minOccurs="0" name="email" type="xs:string" />
+      <xs:element minOccurs="0" name="idsuplier" type="xs:long" />
+      <xs:element minOccurs="0" name="iduser" type="tns:usuario" />
+      <xs:element minOccurs="0" name="name" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="bid">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idauction" type="tns:auction" />
+      <xs:element minOccurs="0" name="idbid" type="xs:long" />
+      <xs:element minOccurs="0" name="idsuplier" type="tns:suplier" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="usuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="auctionList" nillable="true" type="tns:auction" />
+      <xs:element minOccurs="0" name="iduser" type="xs:long" />
+      <xs:element minOccurs="0" name="password" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="suplierList" nillable="true" type="tns:suplier" />
+      <xs:element minOccurs="0" name="tipo" type="xs:string" />
+      <xs:element minOccurs="0" name="usuario" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="product">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="detail" type="xs:string" />
+      <xs:element minOccurs="0" name="idauction" type="tns:auction" />
+      <xs:element minOccurs="0" name="idproduct" type="xs:long" />
+      <xs:element minOccurs="0" name="name" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="remove">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="entity" type="tns:auction" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findAll">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="findAllResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:auction" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAcutionByDates">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fechaInicio" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaFin" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAcutionByDatesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:auction" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="find">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:auction" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findRange">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="range" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findRangeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:auction" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="edit">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="entity" type="tns:auction" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

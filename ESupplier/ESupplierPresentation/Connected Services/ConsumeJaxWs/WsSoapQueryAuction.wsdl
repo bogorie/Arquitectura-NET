@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://servicios/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="WsSoapQueryAuction" targetNamespace="http://servicios/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://192.168.137.233:8080/WsSoapQueryAuction/WsSoapQueryAuction?xsd=1" namespace="http://servicios/" />
+    </xsd:schema>
+  </types>
+  <message name="remove">
+    <part name="parameters" element="tns:remove" />
+  </message>
+  <message name="count">
+    <part name="parameters" element="tns:count" />
+  </message>
+  <message name="countResponse">
+    <part name="parameters" element="tns:countResponse" />
+  </message>
+  <message name="find">
+    <part name="parameters" element="tns:find" />
+  </message>
+  <message name="findResponse">
+    <part name="parameters" element="tns:findResponse" />
+  </message>
+  <message name="create">
+    <part name="parameters" element="tns:create" />
+  </message>
+  <message name="findAll">
+    <part name="parameters" element="tns:findAll" />
+  </message>
+  <message name="findAllResponse">
+    <part name="parameters" element="tns:findAllResponse" />
+  </message>
+  <message name="findRange">
+    <part name="parameters" element="tns:findRange" />
+  </message>
+  <message name="findRangeResponse">
+    <part name="parameters" element="tns:findRangeResponse" />
+  </message>
+  <message name="edit">
+    <part name="parameters" element="tns:edit" />
+  </message>
+  <message name="getAcutionByDates">
+    <part name="parameters" element="tns:getAcutionByDates" />
+  </message>
+  <message name="getAcutionByDatesResponse">
+    <part name="parameters" element="tns:getAcutionByDatesResponse" />
+  </message>
+  <portType name="WsSoapQueryAuction">
+    <operation name="remove">
+      <input wsam:Action="http://servicios/WsSoapQueryAuction/remove" message="tns:remove" />
+    </operation>
+    <operation name="count">
+      <input wsam:Action="http://servicios/WsSoapQueryAuction/countRequest" message="tns:count" />
+      <output wsam:Action="http://servicios/WsSoapQueryAuction/countResponse" message="tns:countResponse" />
+    </operation>
+    <operation name="find">
+      <input wsam:Action="http://servicios/WsSoapQueryAuction/findRequest" message="tns:find" />
+      <output wsam:Action="http://servicios/WsSoapQueryAuction/findResponse" message="tns:findResponse" />
+    </operation>
+    <operation name="create">
+      <input wsam:Action="http://servicios/WsSoapQueryAuction/create" message="tns:create" />
+    </operation>
+    <operation name="findAll">
+      <input wsam:Action="http://servicios/WsSoapQueryAuction/findAllRequest" message="tns:findAll" />
+      <output wsam:Action="http://servicios/WsSoapQueryAuction/findAllResponse" message="tns:findAllResponse" />
+    </operation>
+    <operation name="findRange">
+      <input wsam:Action="http://servicios/WsSoapQueryAuction/findRangeRequest" message="tns:findRange" />
+      <output wsam:Action="http://servicios/WsSoapQueryAuction/findRangeResponse" message="tns:findRangeResponse" />
+    </operation>
+    <operation name="edit">
+      <input wsam:Action="http://servicios/WsSoapQueryAuction/edit" message="tns:edit" />
+    </operation>
+    <operation name="getAcutionByDates">
+      <input wsam:Action="http://servicios/WsSoapQueryAuction/getAcutionByDatesRequest" message="tns:getAcutionByDates" />
+      <output wsam:Action="http://servicios/WsSoapQueryAuction/getAcutionByDatesResponse" message="tns:getAcutionByDatesResponse" />
+    </operation>
+  </portType>
+  <binding name="WsSoapQueryAuctionPortBinding" type="tns:WsSoapQueryAuction">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="remove">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+    </operation>
+    <operation name="count">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="find">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="create">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+    </operation>
+    <operation name="findAll">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="findRange">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="edit">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+    </operation>
+    <operation name="getAcutionByDates">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="WsSoapQueryAuction">
+    <port name="WsSoapQueryAuctionPort" binding="tns:WsSoapQueryAuctionPortBinding">
+      <soap:address location="http://192.168.137.233:8080/WsSoapQueryAuction/WsSoapQueryAuction" />
+    </port>
+  </service>
+</definitions>

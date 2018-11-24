@@ -13,7 +13,7 @@ namespace ESupplierPresentation.Integration
     public class ProxyWinners
     {
         HttpClient client = new HttpClient();
-        readonly string BASE_URI = "http://192.168.43.36:58251/api/winners";
+        readonly string BASE_URI = "http://localhost:58251/api/winners";
 
         public List<Winners> GetWinners()
         {

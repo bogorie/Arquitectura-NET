@@ -59,6 +59,7 @@
     </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -103,6 +104,40 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Connected Services\ConsumeJaxWs\ESupplierPresentation.ConsumeJaxWs.auction.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ConsumeJaxWs\ESupplierPresentation.ConsumeJaxWs.countResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ConsumeJaxWs\ESupplierPresentation.ConsumeJaxWs.findAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ConsumeJaxWs\ESupplierPresentation.ConsumeJaxWs.findRangeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ConsumeJaxWs\ESupplierPresentation.ConsumeJaxWs.findResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ConsumeJaxWs\ESupplierPresentation.ConsumeJaxWs.getAcutionByDatesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\ConsumeJaxWs\WsSoapQueryAuction.wsdl" />
+    <None Include="Connected Services\ConsumeJaxWs\WsSoapQueryAuction.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\consumeWCF\configuration91.svcinfo" />
+    <None Include="Connected Services\consumeWCF\configuration.svcinfo" />
+    <None Include="Connected Services\consumeWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\ConsumeJaxWs\configuration91.svcinfo" />
+    <None Include="Connected Services\ConsumeJaxWs\configuration.svcinfo" />
+    <None Include="Connected Services\ConsumeJaxWs\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
@@ -111,6 +146,16 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <None Include="Connected Services\consumeWCF\ServicioWCF.wsdl" />
+    <None Include="Connected Services\consumeWCF\ServicioWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\consumeWCF\ServicioWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\consumeWCF\ServicioWCF2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -126,6 +171,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Connected Services\ConsumeJaxWs\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\consumeWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Facade\QueryAuctionFacade.cs" />
     <Compile Include="Facade\WinnersFacade.cs" />
     <Compile Include="Global.asax.cs">
@@ -168,6 +223,10 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ConsumeJaxWs\" />
+    <WCFMetadataStorage Include="Connected Services\consumeWCF\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
